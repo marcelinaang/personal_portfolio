@@ -13,8 +13,45 @@ header {
     width: 100vw;
     padding: 5vh 15vw 0 15vw;
     background-color: transparent !important;
+    animation-duration: 3s;
 }
-
+.delayedEntrance {
+    animation-timing-function: ease-in;
+    animation-name: delayedEntrance;
+}
+@keyframes delayedEntrance {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.showHide {
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-name: showHide;
+}
+@keyframes showHide {
+    0% {
+        top: 0;
+    }
+    10% {
+        top: -10vh;
+    }
+    65% {
+        top: -10vh;
+    }
+    100% {
+        top: 0;
+    }
+}
+header *{    
+    transition: color 0.4s ease-in 0.8s;
+}
 .brand {
     display: flex;
     justify-content: flex-start;
@@ -44,6 +81,9 @@ header {
 nav a {
     padding: 0 1rem;
 }
+.nav-toggleable {
+    display: flex;
+}
 #nav-menu {
     display: none;
     text-decoration: none;
@@ -54,6 +94,7 @@ main {
     position: fixed;
     top: 0;
     left: 0;
+    transition: top 0.8s ease-in;
 }
 section {
     padding-top: 10vh;
@@ -67,6 +108,7 @@ section {
     width: 100vw;
     height: 10vh;
     text-align: center;
+    animation-duration: 3s;
 }
 .nav-down a {
     opacity: 0.7;
@@ -95,9 +137,15 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-name: delayedEntrance;
 }
 .home-btn-container {
     height: 35vh;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in;
+    animation-name: delayedEntrance;
 }
 .home-btn-container button {
     margin: 0 0.5rem;
@@ -112,6 +160,9 @@ section {
 /* Contact Section */
 .contact-item i {
     margin-right: 1rem;
+}
+.contact-item a {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1440px) {

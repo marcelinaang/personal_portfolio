@@ -1,4 +1,5 @@
 const main = document.querySelector("main");
+const header = document.querySelector("header");
 const headerLink = document.querySelectorAll("header a");
 const btnContact = document.getElementById("btn-contact");
 const btnPortfolio = document.getElementById("btn-portfolio");
@@ -13,68 +14,50 @@ const navMenu = document.getElementById("nav-menu");
 const navToggleable = document.querySelector(".nav-toggleable");
 
 function changeNavColor() {
+    let color;
+    let backgroundColor;
     switch (main.style.top) {
         case "-100vh":
             if (window.innerWidth > 900) {
-                navToggleable.style.backgroundColor = "#efefef";
-                navHome.style.color = "#006eb3";
-                navAbout.style.color = "#006eb3";
-                navPortfolio.style.color = "#006eb3";
-                navContact.style.color = "#006eb3";
+                backgroundColor = "transparent";
+                color = "#006eb3";
             } else {
-                navToggleable.style.backgroundColor = "#006eb3e2";
-                navHome.style.color = "#efefef";
-                navAbout.style.color = "#efefef";
-                navPortfolio.style.color = "#efefef";
-                navContact.style.color = "#efefef";
-            }
-            break;
-        case "-200vh":
-            if (window.innerWidth > 900) {
-                navToggleable.style.backgroundColor = "#006eb3";
-                navHome.style.color = "#efefef";
-                navAbout.style.color = "#efefef";
-                navPortfolio.style.color = "#efefef";
-                navContact.style.color = "#efefef";
-            } else {
-                navToggleable.style.backgroundColor = "#efefefe2";
-                navHome.style.color = "#006eb3";
-                navAbout.style.color = "#006eb3";
-                navPortfolio.style.color = "#006eb3";
-                navContact.style.color = "#006eb3";
+                backgroundColor = "#006eb3e2";
+                color = "#efefef";
             }
             break;
         case "-300vh":
             if (window.innerWidth > 900) {
-                navToggleable.style.backgroundColor = "#ffbd61";
-                navHome.style.color = "#004672";
-                navAbout.style.color = "#004672";
-                navPortfolio.style.color = "#004672";
-                navContact.style.color = "#004672";
+                backgroundColor = "transparent";
+                color = "#004672";
             } else {
-                navToggleable.style.backgroundColor = "#004672e2";
-                navHome.style.color = "#ffbd61";
-                navAbout.style.color = "#ffbd61";
-                navPortfolio.style.color = "#ffbd61";
-                navContact.style.color = "#ffbd61";
+                backgroundColor = "#004672e2";
+                color = "#ffbd61";
             }
             break;
         default:
             if (window.innerWidth > 900) {
-                navToggleable.style.backgroundColor = "transparent";
-                navHome.style.color = "#efefef";
-                navAbout.style.color = "#efefef";
-                navPortfolio.style.color = "#efefef";
-                navContact.style.color = "#efefef";
+                backgroundColor = "transparent";
+                color = "#efefef";
             } else {
-                navToggleable.style.backgroundColor = "#efefefe2";
-                navHome.style.color = "#006eb3";
-                navAbout.style.color = "#006eb3";
-                navPortfolio.style.color = "#006eb3";
-                navContact.style.color = "#006eb3";
+                backgroundColor = "#efefefe2";
+                color = "#006eb3";
             }
             break;
     }
+    navToggleable.style.backgroundColor = backgroundColor;
+    navHome.style.color = color;
+    navAbout.style.color = color;
+    navPortfolio.style.color = color;
+    navContact.style.color = color;
+}
+function showHide() {
+    header.className = "";
+    window.requestAnimationFrame(function (time) {
+        window.requestAnimationFrame(function (time) {
+            header.className = "showHide";
+        });
+    });
 }
 function goToHome() {
     main.style.top = "0";
@@ -82,6 +65,12 @@ function goToHome() {
         element.style.color = "#efefef";
     });
     checkForWindowResize();
+    header.className = "";
+    window.requestAnimationFrame(function (time) {
+        window.requestAnimationFrame(function (time) {
+            header.className = "delayedEntrance";
+        });
+    });
 }
 function goToAbout() {
     main.style.top = "-100vh";
@@ -89,6 +78,7 @@ function goToAbout() {
         element.style.color = "#006eb3";
     });
     checkForWindowResize();
+    showHide();
 }
 function goToPortfolio() {
     main.style.top = "-200vh";
@@ -96,6 +86,7 @@ function goToPortfolio() {
         element.style.color = "#efefef";
     });
     checkForWindowResize();
+    showHide();
 }
 function goToContact() {
     main.style.top = "-300vh";
@@ -103,6 +94,7 @@ function goToContact() {
         element.style.color = "#004672";
     });
     checkForWindowResize();
+    showHide();
 }
 function toggleNav() {
     if (navToggleable.style.display == "flex") {
