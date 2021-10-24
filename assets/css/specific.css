@@ -16,7 +16,7 @@ header {
     animation-duration: 3s;
 }
 .delayedEntrance {
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
     animation-name: delayedEntrance;
 }
 @keyframes delayedEntrance {
@@ -62,11 +62,14 @@ header *{
     height: 5vh;
     width: 5vh;
     margin-left: 1rem;
+    display: flex;
+    align-items: center;
 }
-.logo-container img {
-    height: 100%;
-    width: auto;
-    border-radius: 5px;
+.logo {
+    height: auto;
+    width: 100%;
+    filter: brightness(0) invert(1);
+    transition: filter 0.8s ease-in-out;
 }
 .brand-name {
     padding: 0 1rem;
@@ -94,7 +97,7 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    transition: top 0.8s ease-in;
+    transition: top 0.8s ease-in-out;
 }
 section {
     padding-top: 10vh;
@@ -138,13 +141,13 @@ section {
     flex-direction: column;
     justify-content: flex-end;
     animation-duration: 1s;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
     animation-name: delayedEntrance;
 }
 .home-btn-container {
     height: 35vh;
     animation-duration: 2.5s;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
     animation-name: delayedEntrance;
 }
 .home-btn-container button {

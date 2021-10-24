@@ -12,10 +12,12 @@ const arrowContact = document.getElementById("arrow-contact");
 const navContact = document.getElementById("nav-contact");
 const navMenu = document.getElementById("nav-menu");
 const navToggleable = document.querySelector(".nav-toggleable");
+const logo = document.querySelector(".logo");
 
 function changeNavColor() {
     let color;
     let backgroundColor;
+    let filter;
     switch (main.style.top) {
         case "-100vh":
             if (window.innerWidth > 900) {
@@ -25,6 +27,7 @@ function changeNavColor() {
                 backgroundColor = "#006eb3e2";
                 color = "#efefef";
             }
+            filter = "none";
             break;
         case "-300vh":
             if (window.innerWidth > 900) {
@@ -34,6 +37,7 @@ function changeNavColor() {
                 backgroundColor = "#004672e2";
                 color = "#ffbd61";
             }
+            filter = "none";
             break;
         default:
             if (window.innerWidth > 900) {
@@ -43,6 +47,7 @@ function changeNavColor() {
                 backgroundColor = "#efefefe2";
                 color = "#006eb3";
             }
+            filter = "brightness(0) invert(1)";
             break;
     }
     navToggleable.style.backgroundColor = backgroundColor;
@@ -50,6 +55,7 @@ function changeNavColor() {
     navAbout.style.color = color;
     navPortfolio.style.color = color;
     navContact.style.color = color;
+    logo.style.filter = filter;
 }
 function showHide() {
     header.className = "";
