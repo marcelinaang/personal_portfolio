@@ -1,0 +1,227 @@
+html {
+    overflow-y: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    height: 10vh;
+    width: 100vw;
+    padding: 5vh 15vw 0 15vw;
+    background-color: transparent !important;
+}
+
+.brand {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+.logo-container {
+    height: 5vh;
+    width: 5vh;
+    margin-left: 1rem;
+}
+.logo-container img {
+    height: 100%;
+    width: auto;
+    border-radius: 5px;
+}
+.brand-name {
+    padding: 0 1rem;
+}
+.brand-name a {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Navigation */
+nav a {
+    padding: 0 1rem;
+}
+#nav-menu {
+    display: none;
+    text-decoration: none;
+}
+
+/* Main Content */
+main {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+section {
+    padding-top: 10vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-down {
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+}
+.nav-down a {
+    opacity: 0.7;
+}
+.nav-down a:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* Home Section */
+.home {
+    background-image: url("../images/james-harrison-vpOeXr5wmR4-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 110, 179, 0.85);
+}
+.greetings,
+.home-btn-container {
+    width: 100vw;
+    padding: 1rem 0;
+    text-align: center;
+}
+.greetings {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.home-btn-container {
+    height: 35vh;
+}
+.home-btn-container button {
+    margin: 0 0.5rem;
+}
+
+/* About Section */
+.about-title {
+}
+
+/* Portfolio Section */
+
+/* Contact Section */
+.contact-item i {
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 1440px) {
+    header,
+    .greetings {
+        padding: 5vh 10vw 0 10vw;
+    }
+}
+@media screen and (max-width: 1280px) {
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    h3 {
+        font-size: 2.3rem;
+    }
+    h4 {
+        font-size: 2rem;
+    }
+    h5 {
+        font-size: 1.6rem;
+    }
+    h6 {
+        font-size: 1.25rem;
+    }
+    header,
+    .greetings {
+        padding: 5vh 5vw 0 5vw;
+    }
+    .greetings {
+        height: 52vh;
+    }
+    .home-btn-container {
+        height: 38vh;
+    }
+}
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 1.75rem;
+    }
+    h5 {
+        font-size: 1.5rem;
+    }
+    h6 {
+        font-size: 1.1rem;
+    }
+    .nav-toggleable {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: calc(5vw + 1rem);
+        text-align: center;
+        margin: 0.5rem 0;
+        border-radius: 10px;
+        background-color: #efefefe2;
+    }
+    .nav-toggleable a {
+        margin: 0.25rem 0;
+        padding: 0.5rem 2rem;
+        color: #006eb3;
+    }
+    #nav-menu {
+        display: flex;
+    }
+    .greetings {
+        height: 50vh;
+    }
+    .home-btn-container {
+        height: 40vh;
+    }
+}
+@media screen and (max-width: 600px) {
+    .home-btn-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 25vw;
+    }
+    .home-btn-container button {
+        margin: 0.25rem 0;
+    }
+}
+@media screen and (max-width: 480px) {
+    .logo-container{
+        display: none;
+    }
+    .home-btn-container {
+        padding: 0 20vw;
+    }
+}
+@media screen and (max-width: 420px) {
+    .brand-name{
+        display: none;
+    }    
+    .nav-toggleable {
+        width: 100%;
+        right: 0;
+        border-radius: 5px;        
+    }
+    .home-btn-container {
+        padding: 0 15vw;
+    }
+}

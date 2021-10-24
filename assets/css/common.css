@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 18px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* ---------- */
+/* ---------- */
+/* Typography */
+/* ---------- */
+/* ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Asul", sans-serif;
+}
+
+h1 {
+    font-size: 6.5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.5rem;
+}
+h5 {
+    font-size: 2rem;
+}
+h6 {
+    font-size: 1.5rem;
+}
+
+p,
+span,
+strong,
+em,
+a,
+button,
+input,
+textarea {
+    font-size: 1rem;
+    font-family: "Laila", sans-serif;
+}
+
+/* ----- */
+/* ----- */
+/* Color */
+/* ----- */
+/* ----- */
+.bg-primary {
+    background-color: #006eb3;
+    color: #efefef;
+}
+.bg-primary a {
+    color: #efefef;
+}
+.bg-secondary {
+    background-color: #efefef;
+    color: #006eb3;
+}
+.bg-secondary a {
+    color: #006eb3;
+}
+.bg-accent {
+    background-color: #ffbd61;
+    color: #004672;
+}
+.bg-accent a {
+    color: #004672;
+}
+
+/* Components */
+button {
+    height: 2.75rem;
+    min-width: 12rem;
+    border-radius: calc(2.75rem / 2);
+    padding: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in;
+}
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0.1rem 0.05rem;
+    font-weight: 600;
+}
+button:focus {
+    box-shadow: none;
+    font-weight: 500;
+}
+.btn-primary {
+    border: 2px solid #006eb3;
+    color: #efefef;
+    background-color: #006eb3;
+}
+.btn-primary-o {
+    border: 2px solid #006eb3;
+    color: #006eb3;
+    background-color: transparent;
+}
+.btn-secondary {
+    border: 2px solid #efefef;
+    color: #006eb3;
+    background-color: #efefef;
+}
+.btn-secondary-o {
+    border: 2px solid #efefef;
+    color: #efefef;
+    background-color: transparent;
+}
+.btn-accent {
+    border: 2px solid #ffbd61;
+    color: #004672;
+    background-color: #ffbd61;
+}
+.btn-accent-o {
+    border: 2px solid #ffbd61;
+    color: #ffbd61;
+    background-color: transparent;
+}
