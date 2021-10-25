@@ -49,7 +49,7 @@ header {
         top: 0;
     }
 }
-header *{    
+header * {
     transition: color 0.4s ease-in 0.8s;
 }
 .brand {
@@ -155,19 +155,53 @@ section {
 }
 
 /* About Section */
+.about-title,
+.about-content {
+    width: 100vw;
+    padding: 0.5rem 15vw;
+    text-align: center;
+}
 .about-title {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.about-content {
+    height: 45vh;
 }
 
 /* Portfolio Section */
 
 /* Contact Section */
+.contact-title,
+.contact-container {
+    width: 100vw;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+.contact-title {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.contact-container {
+    height: 45vh;
+}
+.contact-item {
+    margin-top: 0.5rem;
+}
 .contact-item i {
     margin-right: 1rem;
+    font-size: 1.4rem;
 }
 .contact-item a {
     text-decoration: none;
+    font-size: 1.4rem;
 }
 
+/* Responsive Design*/
 @media screen and (max-width: 1440px) {
     header,
     .greetings {
@@ -247,6 +281,16 @@ section {
     .home-btn-container {
         height: 40vh;
     }
+    .about-title {
+        height: 35vh;
+    }
+    .about-content {
+        height: 55vh;
+    }
+    .contact-item i,
+    .contact-item a {
+        font-size: 1.2rem;
+    }
 }
 @media screen and (max-width: 600px) {
     .home-btn-container {
@@ -257,9 +301,15 @@ section {
     .home-btn-container button {
         margin: 0.25rem 0;
     }
+    .about-title {
+        height: 30vh;
+    }
+    .about-content {
+        height: 60vh;
+    }
 }
 @media screen and (max-width: 480px) {
-    .logo-container{
+    .logo-container {
         display: none;
     }
     .home-btn-container {
@@ -267,15 +317,21 @@ section {
     }
 }
 @media screen and (max-width: 420px) {
-    .brand-name{
+    .brand-name {
         display: none;
-    }    
+    }
     .nav-toggleable {
         width: 100%;
         right: 0;
-        border-radius: 5px;        
+        border-radius: 5px;
     }
     .home-btn-container {
         padding: 0 15vw;
+    }
+    .about-title {
+        height: 20h;
+    }
+    .about-content {
+        height: 70vh;
     }
 }

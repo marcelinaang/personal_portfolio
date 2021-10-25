@@ -59,8 +59,8 @@ function changeNavColor() {
 }
 function showHide() {
     header.className = "";
-    window.requestAnimationFrame(function (time) {
-        window.requestAnimationFrame(function (time) {
+    window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
             header.className = "showHide";
         });
     });
@@ -72,8 +72,8 @@ function goToHome() {
     });
     checkForWindowResize();
     header.className = "";
-    window.requestAnimationFrame(function (time) {
-        window.requestAnimationFrame(function (time) {
+    window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
             header.className = "delayedEntrance";
         });
     });
